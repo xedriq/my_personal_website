@@ -1,12 +1,301 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'main_page/css/style.css' %}">
+    
     <title>{{ title }}</title>
 </head>
-<body>
-    {{ test_text }}
+
+<body class="container">
+    <div class="lines">
+        <img class="line" src="{% static 'main_page/img/line1.svg' %}" alt="">
+        <img class="line2" src="{% static 'main_page/img/line2.svg' %}" alt="">
+        <img class="line3" src="{% static 'main_page/img/line3.svg' %}" alt="">
+        <img class="line4" src="{% static 'main_page/img/line4.svg' %}" alt="">
+        <img class="line5" src="{% static 'main_page/img/line5.svg' %}" alt="">
+    </div>
+    <nav class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi_toggle">
+        <label for="navi_toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        <a class="navigation__logo scroll" href="#home">
+            <img class="navigation__photo" src="{% static 'main_page/img/CEDRICK-TABARES.svg' %}" alt="photo">
+            <div class="navigation__logo-name">Cedrick Tabares</div>
+        </a>
+        <ul class="navigation__items">
+            <li class="navigation__item">
+                <a class="btn-text navigation__link scroll" href="#home">home</a>
+            </li>
+            <li class="navigation__item">
+                <a class="btn-text navigation__link scroll" href="#about">about</a>
+            </li>
+            <li class="navigation__item">
+                <a class="btn-text navigation__link scroll" href="#whatido">what i do</a>
+            </li>
+            <li class="navigation__item">
+                <a class="btn-text navigation__link scroll" href="#works">works</a>
+            </li>
+            <li class="navigation__item">
+                <a class="btn-text navigation__link scroll" href="#contact">contact</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="main">
+        <header class="home" id="home">
+            <div class="owl-carousel">
+                <div class="heading-1">
+                    <h1>
+                        <span class="subheading">Hey there, I'm</span>
+                        <span class="heading">Cedrick Tabares</span>
+                    </h1>
+                </div>
+
+                <div class="heading-2">
+                    <h1>
+                        <span class="subheading">I'm from Philippines</span>
+                        <span class="heading">A Web Developer</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <svg class="scroll-down__icon">
+                    <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-chevron-down"></use>
+                </svg>
+            </div>
+        </header>
+
+        <section class="about" id="about">
+            <h2 class="about__heading">About me</h2>
+            <p class="about__content">
+                I'm a passionate web developer living in Quezon City, Philippines. With my Bachelor of Science in
+                Computer Science and my recent training in full-stack web development, together with the creative, organizational
+                and technical skills that I acquired as Videographer / Video Editor for more than 10 years &mdash;from
+                here and abroad, I aim to develop functional, dynamic and effective web applications that delivers clear message
+                to the user while contributing to the interest of the website owner. May it be collaborating with a
+                team or with minimal supervision.
+            </p>
+            <div class="about__cta">
+                <a href="#" class="about__link btn-text">Download my CV</a>
+            </div>
+        </section>
+
+        <section class="whatido" id="whatido">
+            <h2 class="whatido__heading">What I do</h2>
+            
+            <div class="whatido__section">
+                <div class="whatido__icon">
+                    <svg>
+                        <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-code"></use>
+                    </svg>
+                </div>
+                <h3 class="whatido__subheading">Basic to Mid Level in<br>Front-End Development</h3>
+                <p class="whatido__content">
+                    I recently attended and completed 2
+                    short courses from UP Diliman SITF
+                    about HTML, CSS, Jquery, Python and Django
+                    <span class="whatido__subhead-secondary">
+                        Some tools I'm comfortable
+                        working with on the front-end:
+                    </span>
+                </p>
+
+                <ul class="whatido__items">
+                    <li class="whatido__item">HTML5</li>
+                    <li class="whatido__item">CSS/SASS</li>
+                    <li class="whatido__item">JavaScript/JQuery</li>
+                    <li class="whatido__item">Bootstrap</li>
+                    <li class="whatido__item">SemanticUI</li>
+                    <li class="whatido__item">Adobe XD/Adobe Photoshop</li>
+                    <li class="whatido__item">NPM</li>
+                    <li class="whatido__item">Git</li>
+                </ul>
+            </div>
+            
+            <div class="whatido__section">
+                <div class="whatido__icon">
+                    <svg>
+                        <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-terminal"></use>
+                    </svg>
+                </div>
+                <h3 class="whatido__subheading">Certified Associate in<br>Python Programming</h3>
+                <p class="whatido__content">
+                    I recently acquire my certification and I'm looking forward on using the
+                    knowledge and learn more on the process.
+                    You can verify my certificate 
+                        <a href="https://verify.openedg.org/?id=e7nY.nLPh.xrPk"
+                            target="_blank" class="whatido__cert-link">here.
+                        </a>
+                    </p>
+                    <p class="whatido__subhead-secondary">
+                        Some tools I'm comfortable
+                        working with Python:
+                    </p>
+                
+                <ul class="whatido__items">
+                    <li class="whatido__item">Django</li>
+                    <li class="whatido__item">Numpy</li>
+                    <li class="whatido__item">Pandas</li>
+                    <li class="whatido__item">Pip</li>
+                    <li class="whatido__item">Git</li>
+                </ul>
+            </div>
+            
+            <div class="whatido__section">
+                <div class="whatido__icon">
+                    <svg>
+                        <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-database"></use>
+                    </svg>
+                </div>
+                <h3 class="whatido__subheading">Focus on Back-End<br>Development</h3>
+                <p class="whatido__content">
+                    I prefer to mainly focus on the back-end side
+                    of the development. I believe in mastering
+                    a skill / discipline than knowing all at the basic level.
+                </p>
+                <p class="whatido__subhead-secondary">
+                    Some tools I'm comfortable
+                    working with on the back-end:
+                </p>
+                
+                <ul class="whatido__items">
+                    <li class="whatido__item">Django</li>
+                    <li class="whatido__item">Django REST Framework</li>
+                    <li class="whatido__item">MySQL</li>
+                    <li class="whatido__item">PostgreSQL</li>
+                    <li class="whatido__item">MongoDB</li>
+                    <li class="whatido__item">Pip</li>
+                    <li class="whatido__item">Git</li>
+                </ul>
+
+            </div>
+
+            <div class="whatido__cta">
+                <a href="#" class="btn-text whatido__link">See some of my works</a>
+            </div>
+
+        </section>
+
+        <section class="works" id="works">
+            <h2 class="works__heading">Recent works</h2>
+            <div class="works__projects">
+                <figure>
+                    <img class="works__image" src="{% static 'main_page/img/charlotte_pattiserie.PNG' %}" alt="proj_photo">
+                </figure>
+                <div class="works__caption">Role: Design, Develop and Deploy</div>
+                <div class="works__button">
+                    <a href="https://charlottepatisserie.000webhostapp.com/" target="_blank"
+                        class="btn works__button__site">Visit Site</a>
+                    <a href="https://github.com/xedriq/" target="_blank" class="btn works__button__github">Check
+                        Code</a>
+                </div>
+            </div>
+
+            <div class="works__projects">
+                <figure>
+                    <img class="works__image" src="{% static 'main_page/img/myportfolio.PNG' %}" alt="proj_photo">
+                </figure>
+                <div class="works__caption">Role: Design, Develop and Deploy</div>
+                <div class="works__button">
+                    <a href="#" target="_blank" class="btn works__button__site">Visit Site</a>
+                    <a href="https://github.com/xedriq/portfolio3" target="_blank"
+                        class="btn works__button__github">Check Code</a>
+                </div>
+            </div>
+
+            <div class="works__projects">
+                <figure>
+                    <img class="works__image" src="{% static 'main_page/img/coming_soon.svg' %}" alt="proj_photo">
+                </figure>
+            </div>
+
+
+        </section>
+
+        <section class="contact" id="contact">
+            <h2 class="header">Contact me</h2>
+            <form action="" class="form">
+                <input class="input" type="text" name="name" placeholder="Your Name" required>
+                <input class="input" type="email" name="email" placeholder="Your Email" required>
+                <input class="input" type="text" name="subject" placeholder="Subject" required>
+                <textarea class="input" name="message" rows="7" placeholder="Message" required></textarea>
+                <button class="btn submit" type="submit" name="submit">Send</button>
+            </form>
+
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="500" height="430" id="gmap_canvas" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d964.6304617925322!2d121.05457462923317!3d14.739604399357138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b041f57c0b1b%3A0x721ea885a578bb93!2sLou+Sheff%2C+Novaliches%2C+Quezon+City%2C+Metro+Manila!5e0!3m2!1sen!2sph!4v1559561326553!5m2!1sen!2sph" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    
+    <footer class="footer" id="footer">
+        <div class="social-links">
+            <a href="https://www.facebook.com/xedriq" target="_blank" class="social__link">
+                <svg class="social-icon">
+                    <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-facebook"></use>
+                </svg></a>
+            <a href="https://github.com/xedriq" target="_blank" class="social__link">
+                <svg class="social-icon">
+                    <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-github"></use>
+                </svg></a>
+            <a href="https://www.instagram.com/brzedie/" target="_blank" class="social__link">
+                <svg class="social-icon">
+                    <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-instagram"></use>
+                </svg></a>
+        </div>
+
+        <div class="contact-icons">
+            <div class="mobile">
+                <svg class="contact-icon">
+                    <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-smartphone"></use>
+                </svg>
+                <span class="detail">+63 926 681 1463</span>
+            </div>
+            <div class="email">
+                <svg class="contact-icon">
+                    <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-at-sign"></use>
+                </svg>
+                <span class="detail">xedriq@gmail.com</span>
+            </div>
+            <div class="address">
+                <svg class="contact-icon">
+                    <use xlink:href="{% static 'main_page/img/sprite.svg' %}#icon-map-pin"></use>
+                </svg>
+                <span class="detail">Block 1 Lot 33 Lou Sheff St Pamahay Homes<br>
+                    Pasong Putik Quezon City Philippines 1118</span>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; Xedriq 2019 | Designed and Developed by me
+        </div>
+
+    </footer>
+    
+    <!-- JS -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="{% static 'main_page/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'main_page/js/myjs.js' %}"></script>
+    
+    
 </body>
 </html>
