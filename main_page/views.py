@@ -8,12 +8,13 @@ def home(request):
 
     template_name = 'main_page/home.html'
 
-    if request.method == 'POST':
+    if request.method == 'POST': # check if request is POST
         name = request.POST['name']
         email = request.POST['email']
         subject = request.POST['subject']
         message = request.POST['message']
         
+        # Create Contact object
         c = Contact(name=name, email=email, subject=subject, message=message)
         c.save()
 

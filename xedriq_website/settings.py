@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'xedriq_website_db',
         'USERNAME': os.environ['DB_USER'],
         'PASSWORD': os.environ['DB_PASSWORD'],
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'HOST': os.environ['DB_HOST'],
+        'PORT': os.environ['DB_PORT'],
     }
 }
 
