@@ -227,7 +227,8 @@
 
         <section class="contact" id="contact">
             <h2 class="header">Contact me</h2>
-            <form action="" class="form">
+            <form action="{% url 'home-page' %}" class="form" method="POST">
+                {% csrf_token %}
                 <input class="input" type="text" name="name" placeholder="Your Name" required>
                 <input class="input" type="email" name="email" placeholder="Your Email" required>
                 <input class="input" type="text" name="subject" placeholder="Subject" required>
