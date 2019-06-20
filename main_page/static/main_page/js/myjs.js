@@ -20,7 +20,7 @@ $(document).ready(function () {
   scrollLink.click(function (e) {
     e.preventDefault();
     $('body,html').stop().animate({
-      scrollTop: $(this.hash).offset().top - 150
+      scrollTop: $(this.hash).offset().top - 130
     }, 800);
   });
 
@@ -28,7 +28,7 @@ $(document).ready(function () {
     var scrollbarLocation = $(this).scrollTop();
 
     scrollLink.each(function () {
-      var sectionOffset = $(this.hash).offset().top-210;
+      var sectionOffset = $(this.hash).offset().top - 210;
 
       if (sectionOffset <= scrollbarLocation) {
         $(this).addClass('navigation__link--active');
@@ -36,4 +36,8 @@ $(document).ready(function () {
       }
     })
   })
+
+  setTimeout(function () {
+    $('#alert').fadeOut('slow');
+  }, 2000)
 });
