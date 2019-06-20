@@ -1,1 +1,1 @@
-web: gunicorn xedriq_website.wsgi.application
+web: gunicorn xedriq_website.wsgi
