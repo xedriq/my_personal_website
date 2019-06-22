@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ['DEBUG_VALUE'] == 'True')
+DEBUG = False
 
 
 ALLOWED_HOSTS = []
@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'xedriq_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'xedriq_website_db',
-        'USERNAME': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASSWORD'],
-        'HOST': os.environ['DB_HOST'],
-        'PORT': os.environ['DB_PORT'],
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'USERNAME': os.environ['DB_USER'],
+        # 'PASSWORD': os.environ['DB_PASSWORD'],
+        # 'HOST': os.environ['DB_HOST'],
+        # 'PORT': os.environ['DB_PORT'],
     }
 }
 
