@@ -1,1 +1,0 @@
-web: gunicorn xedriq_website.wsgi
